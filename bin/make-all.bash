@@ -8,4 +8,4 @@ for d in $(ls); do
     popd ;
 done 
 
-$BIN_DIR/make-main-idx.bash 
+$BIN_DIR/make-main-idx.bash data-index.html

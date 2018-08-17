@@ -1,4 +1,4 @@
-OUT='index.html'
+OUT='data-index.html'
 
 BIN_DIR=`dirname $0`
 cd $BIN_DIR/../
