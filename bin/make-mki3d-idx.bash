@@ -20,6 +20,7 @@ cat - << EOF
 <!DOCTYPE html>
 <html>
   <body>
+    <h2>MKI3D DATA:</h2>
     <ul>
 EOF
 # for x in $(ls -1 *.mki3d | encodelines ); do echo '     <li><a href="'$MKI3D_APP'?input='$x'">'$x'</a></li>'; done
