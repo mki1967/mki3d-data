@@ -1,5 +1,4 @@
 # MKI3D DATA
-
 Collection of data for [MKI3D](https://mki1967.github.io/mki3d/).
 
 This is example directory containing some MKI3D data and the scripts that produce HTML indexes of the
