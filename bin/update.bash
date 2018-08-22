@@ -5,6 +5,7 @@ cd $BIN_DIR/../data/
 for d in $(ls); do
     pushd $d;
     $BIN_DIR/make-public-idx.bash
+    $BIN_DIR/make-8000-idx.bash
     popd ;
 done 
 
