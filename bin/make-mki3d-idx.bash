@@ -9,7 +9,10 @@ encodelines() {
     do
 	# urlencode $LINE
 	# echo '"'$LINE'"'
-	echo '     <li><a href="'$MKI3D_APP'?input='$LINE'">'$LINE'</a></li>'
+	echo '     <li>'\
+	     '<a href="'$MKI3D_APP'?input='$LINE'">'$LINE'</a>'\
+	     '(<a href="'$LINE'">raw</a>)'\
+	     '</li>'
 	echo ' '
 	read LINE; 
 	END=$?;
