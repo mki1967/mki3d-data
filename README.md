@@ -37,7 +37,8 @@ This (served) directory should also contain the clone of `https://github.com/mki
 side by side with `mki3d-data` repository.
 
 The listing of data folders contains the links displayed as `(raw dir)` with the access to raw directory listings,
-where you can find index files `INDEX_MKI3D_8000.html` prepared for your work with local server and the
-apps from the local clone of `https://github.com/mki1967/mki3d`.
+where you can find index files `INDEX_MKI3D_8000.html` prepared for your work with the local server and
+the apps from your clone of `https://github.com/mki1967/mki3d`.
+
 (Make the updates of your clone of `https://github.com/mki1967/mki3d` by `git pull` commands in the `master` branch.)
 
