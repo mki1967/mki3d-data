@@ -11,7 +11,8 @@ encodelines() {
 	# echo '"'$LINE'"'
 	echo '     <li>'\
 	     '<a href="'$MKI3D_APP'?input='$LINE'">'$LINE'</a>'\
-	     '(<a href="'$LINE'">raw</a>)'\
+	     '(<a href="'$MKI3D_TRAVEL'?input='$LINE'">'travel'</a>, '\
+	     '<a href="'$LINE'">raw</a>)'\
 	     '</li>'
 	echo ' '
 	read LINE; 
