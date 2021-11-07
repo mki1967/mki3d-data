@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-<script>
+encodelines() {
+    echo '<script>'
+    cat - <<'EOF'
 function makeUl( names ){
     const mki3dPrefix="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=";
     const travelPrefix="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=";
@@ -18,12 +17,31 @@ function makeUl( names ){
     ul+="</ul>\n";
     return ul;
 }
-window.onload = function(){
-  var names=[];
-  names.push("item.mki3d");
-  document.getElementById("items").innerHTML= makeUl( names );
+EOF
+    echo 'window.onload = function(){'
+    echo '  var names=[];'
+    read LINE; 
+    END=$?;
+    while [[ ${END} == 0 ]] ;
+    do
+	echo '  names.push("'$LINE'");' 
+	read LINE; 
+	END=$?;
+    done;
+    echo '  document.getElementById("items").innerHTML= makeUl( names );'
+    echo '}'
+    echo '</script>'
 }
-</script>
+
+cat - << 'EOF'
+<!DOCTYPE html>
+<html>
+  <head>
+EOF
+
+ls -1 *.mki3d | encodelines 
+
+cat - << 'EOF'
   </head>
   <body>
     <h2>MKI3D DATA:</h2>
@@ -31,3 +49,4 @@ window.onload = function(){
     </div>
   </body>
 </html>
+EOF

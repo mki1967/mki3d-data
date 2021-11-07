@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
+  <head>
+<script>
+function makeUl( names ){
+    const mki3dPrefix="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=";
+    const travelPrefix="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=";
+    let base=document.URL;
+    let ul="<ul>\n";
+    for( let i=0; i<names.length; i++){
+	url=new URL(names[i], base );
+	ul+="<li>"+
+            "<a href='"+mki3dPrefix+url+"'>"+names[i]+"</a>, "+
+            "<a href='"+travelPrefix+url+"'>TRAVEL</a>, "+
+            "<a href='"+url+"'>RAW</a>"+
+            "</li>\n"
+    }
+    ul+="</ul>\n";
+    return ul;
+}
+window.onload = function(){
+  var names=[];
+  names.push("5-squares-cube-textured.mki3d");
+  names.push("5-squares-cube-textured-more.mki3d");
+  names.push("cubic-stage-textured.mki3d");
+  names.push("ex2-ext-textured.mki3d");
+  names.push("hollow-square-pyramid_x_2.mki3d");
+  names.push("noname.mki3d");
+  names.push("sfix-cube-expanded-textured-1.mki3d");
+  names.push("sfix-cube-expanded-textured.mki3d");
+  names.push("stage1-textured3a.mki3d");
+  names.push("stage1-textured3.mki3d");
+  document.getElementById("items").innerHTML= makeUl( names );
+}
+</script>
+  </head>
   <body>
     <h2>MKI3D DATA:</h2>
-    <ul>
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=5-squares-cube-textured.mki3d">5-squares-cube-textured.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=5-squares-cube-textured.mki3d">travel</a>,  <a href="5-squares-cube-textured.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=5-squares-cube-textured-more.mki3d">5-squares-cube-textured-more.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=5-squares-cube-textured-more.mki3d">travel</a>,  <a href="5-squares-cube-textured-more.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=cubic-stage-textured.mki3d">cubic-stage-textured.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=cubic-stage-textured.mki3d">travel</a>,  <a href="cubic-stage-textured.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=ex2-ext-textured.mki3d">ex2-ext-textured.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=ex2-ext-textured.mki3d">travel</a>,  <a href="ex2-ext-textured.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=hollow-square-pyramid_x_2.mki3d">hollow-square-pyramid_x_2.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=hollow-square-pyramid_x_2.mki3d">travel</a>,  <a href="hollow-square-pyramid_x_2.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=noname.mki3d">noname.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=noname.mki3d">travel</a>,  <a href="noname.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=sfix-cube-expanded-textured-1.mki3d">sfix-cube-expanded-textured-1.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=sfix-cube-expanded-textured-1.mki3d">travel</a>,  <a href="sfix-cube-expanded-textured-1.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=sfix-cube-expanded-textured.mki3d">sfix-cube-expanded-textured.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=sfix-cube-expanded-textured.mki3d">travel</a>,  <a href="sfix-cube-expanded-textured.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=stage1-textured3a.mki3d">stage1-textured3a.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=stage1-textured3a.mki3d">travel</a>,  <a href="stage1-textured3a.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=stage1-textured3.mki3d">stage1-textured3.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=stage1-textured3.mki3d">travel</a>,  <a href="stage1-textured3.mki3d">raw</a>) </li>
- 
-    </ul>
+    <div id='items'>
+    </div>
   </body>
 </html>

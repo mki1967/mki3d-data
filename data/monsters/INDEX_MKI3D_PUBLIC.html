@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
+  <head>
+<script>
+function makeUl( names ){
+    const mki3dPrefix="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=";
+    const travelPrefix="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=";
+    let base=document.URL;
+    let ul="<ul>\n";
+    for( let i=0; i<names.length; i++){
+	url=new URL(names[i], base );
+	ul+="<li>"+
+            "<a href='"+mki3dPrefix+url+"'>"+names[i]+"</a>, "+
+            "<a href='"+travelPrefix+url+"'>TRAVEL</a>, "+
+            "<a href='"+url+"'>RAW</a>"+
+            "</li>\n"
+    }
+    ul+="</ul>\n";
+    return ul;
+}
+window.onload = function(){
+  var names=[];
+  names.push("monster_1.mki3d");
+  names.push("monster-duck.mki3d");
+  names.push("monster_skull.mki3d");
+  names.push("zero-monster (1).mki3d");
+  document.getElementById("items").innerHTML= makeUl( names );
+}
+</script>
+  </head>
   <body>
     <h2>MKI3D DATA:</h2>
-    <ul>
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=monster_1.mki3d">monster_1.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=monster_1.mki3d">travel</a>,  <a href="monster_1.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=monster-duck.mki3d">monster-duck.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=monster-duck.mki3d">travel</a>,  <a href="monster-duck.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=monster_skull.mki3d">monster_skull.mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=monster_skull.mki3d">travel</a>,  <a href="monster_skull.mki3d">raw</a>) </li>
- 
-     <li> <a href="https://mki1967.github.io/mki3d/mki3d_www/mki3d.html?input=zero-monster (1).mki3d">zero-monster (1).mki3d</a> (<a href="https://mki1967.github.io/mki3d/mki3d_www/travel.html?input=zero-monster (1).mki3d">travel</a>,  <a href="zero-monster (1).mki3d">raw</a>) </li>
- 
-    </ul>
+    <div id='items'>
+    </div>
   </body>
 </html>
