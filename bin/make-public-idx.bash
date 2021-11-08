@@ -3,5 +3,5 @@ export MKI3D_TRAVEL='https://mki1967.github.io/mki3d/mki3d_www/travel.html'
 
 BIN_DIR=`dirname $0`
 # $BIN_DIR/make-mki3d-idx.bash > INDEX_MKI3D_PUBLIC.html
-$BIN_DIR/make-dynamic-idx.bash > INDEX_MKI3D_PUBLIC.html
+$BIN_DIR/make-dynamic-idx.bash ${1} > INDEX_MKI3D_PUBLIC.html
 

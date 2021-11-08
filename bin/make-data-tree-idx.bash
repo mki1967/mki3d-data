@@ -52,7 +52,7 @@ update_dirs() {
     END=$?;
     while [[ ${END} == 0 ]] ; do
 	pushd ${LINE};
-	$BIN_DIR/make-public-idx.bash
+	$BIN_DIR/make-public-idx.bash $(echo ${LINE}| grep -o '/.*$')
 	# $BIN_DIR/make-8000-idx.bash
 	popd ;
 	read LINE; 
