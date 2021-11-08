@@ -1,0 +1,9 @@
+### printing directories containing '*.mki3d' files:
+
+## BEGIN
+
+encodelines() {     read LINE;      END=$?;     while [[ ${END} == 0 ]] ;     do dirname "${LINE}"; basename "${LINE}"; read LINE;  END=$?;     done;     }
+
+find data/ -name '*.mki3d' -ls| grep -o 'data/.*$' | encodelines 
+
+## END
