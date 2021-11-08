@@ -14,9 +14,7 @@ encodelines() {
     while [[ ${END} == 0 ]] ;
     do
 	echo '     <li>'\
-	     '<a href="data/'$LINE'/INDEX_MKI3D_PUBLIC.html">'$LINE'</a>'\
-	     '(<a href="data/'$LINE'/">raw dir</a>)'\
-	     '</li>'
+	     '<a href="data/'${LINE}'/INDEX_MKI3D_PUBLIC.html">'${LINE}'</a></li>'
 	echo ' '
 	read LINE; 
 	END=$?;

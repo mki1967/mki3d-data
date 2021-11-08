@@ -9,9 +9,11 @@ function makeUl( names ){
     for( let i=0; i<names.length; i++){
 	url=new URL(names[i], base );
 	ul+="<li>"+
-            "<a href='"+mki3dPrefix+url+"'>"+names[i]+"</a>, "+
-            "<a href='"+travelPrefix+url+"'>TRAVEL</a>, "+
-            "<a href='"+url+"'>RAW</a>"+
+            "<a href='"+mki3dPrefix+url+"'>"+names[i]+"</a>"+
+            "<ul>"+
+            "<li><a href='"+travelPrefix+url+"'>TRAVEL</a></li>"+
+            "<li><a href='"+url+"'>RAW</a></li>"+
+            "</ul>"+
             "</li>\n"
     }
     ul+="</ul>\n";
